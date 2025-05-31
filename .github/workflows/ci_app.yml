@@ -1,0 +1,28 @@
+# file: .github/workflows/my_first_workflow.yml
+name: CI - APP
+# on – определяет события, которые запускают воркфлоу
+on: push
+jobs:
+  # build – произвольно выбранное имя задания
+  # их может быть больше одного
+  build:
+    # операционная система для работы воркфлоу
+    runs-on: ubuntu-latest
+    steps:
+	
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies and build
+      run: make setup
+
+    - name: Run linter
+      run: make lint
+
+    - name: Run tests
+      run: make test
