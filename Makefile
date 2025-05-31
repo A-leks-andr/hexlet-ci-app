@@ -1,5 +1,5 @@
 setup:
-	install build
+	install_deps build
 
 install:
 	npm install
