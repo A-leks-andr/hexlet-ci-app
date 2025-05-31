@@ -1,5 +1,6 @@
 setup:
-	install_deps build
+	install_deps 
+	make build
 
 install_deps:
 	npm install
@@ -16,4 +17,4 @@ test:
 lint:
 	npx eslint .
 
-.PHONY: build
+.PHONY: build install_deps setup
