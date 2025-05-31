@@ -1,7 +1,7 @@
 setup:
 	install_deps build
 
-install:
+install_deps:
 	npm install
 
 build:
