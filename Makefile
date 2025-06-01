@@ -1,6 +1,5 @@
 setup:
-	$(MAKE) install_deps 
-	$(MAKE) make build
+	install_deps build
 
 install_deps:
 	npm install
