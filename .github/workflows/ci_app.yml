@@ -1,7 +1,12 @@
 # file: .github/workflows/my_first_workflow.yml
 name: CI - APP
 # on – определяет события, которые запускают воркфлоу
-on: push
+on: 
+  - push
+  - pull_request
+
+env:
+  CI: true
 jobs:
   # build – произвольно выбранное имя задания
   # их может быть больше
